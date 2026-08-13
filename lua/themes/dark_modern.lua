@@ -362,6 +362,8 @@ M.polish_hl = {
     ["@label"] = {
       fg = "#C8C8C8",
     },
+
+    -- Rust
   },
 
   syntax = {
@@ -430,6 +432,10 @@ M.polish_hl = {
     -- Functions
     Function = {
       fg = "#DCDCAA",
+    },
+
+    Macro = {
+      fg = "#569CD6",
     },
 
     -- Types
@@ -672,10 +678,36 @@ M.polish_hl = {
       fg = "#FFFFFF",
       bold = true,
     },
+    RainbowDelimiterRed = {
+      fg = "#569CD6",
+    },
+
+    RainbowDelimiterYellow = {
+      fg = "#4EC9B0",
+    },
+
+    RainbowDelimiterBlue = {
+      fg = "#DCDCAA",
+    },
+
+    RainbowDelimiterOrange = {
+      fg = "#C586C0",
+    },
+
+    RainbowDelimiterGreen = {
+      fg = "#9CDCFE",
+    },
+
+    RainbowDelimiterViolet = {
+      fg = "#D7BA7D",
+    },
+
+    RainbowDelimiterCyan = {
+      fg = "#4FC1FF",
+    },
   },
 }
 
 M.type = "dark"
 
 return M
-
