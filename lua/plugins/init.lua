@@ -1,43 +1,37 @@
 return {
   {
-    "nvim-treesitter/nvim-treesitter",
-    lazy = false,
-    build = ":TSUpdate",
-  },
-  {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
+
   {
-    "mrcjkb/rustaceanvim",
-    -- To avoid being surprised by breaking changes,
-    -- I recommend you set a version range
-    version = "^9",
-    -- This plugin implements proper lazy-loading (see :h lua-plugin-lazy).
-    -- No need for lazy.nvim to lazy-load it.
-    lazy = false,
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
   },
   {
-    "HiPhish/rainbow-delimiters.nvim",
-    config = function()
-      vim.g.rainbow_delimiters = {
-        strategy = {
-          [""] = "rainbow-delimiters.strategy.global",
-        },
-
-        query = {
-          [""] = "rainbow-delimiters",
-        },
-
-        priority = { "RainbowDelimiterCyan", [""] = 110 },
-
-        highlight = {
-          "RainbowDelimiterViolet",
-          "RainbowDelimiterBlue",
-          "RainbowDelimiterYellow",
-        },
+    "mfussenegger/nvim-dap",
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+    lazy = false,
+    config = function(_, opts)
+      require("nvim-dap-virtual-text").setup()
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      local M = require "configs.cmp"
+      M.completion.completeopt = "menu,menuone,noselect"
+      M.mapping["<CR>"] = cmp.mapping.confirm {
+        behavior = cmp.ConfirmBehavior.Insert,
+        select = false,
       }
+      table.insert(M.sources, { name = "crates" })
+      return M
     end,
   },
 }
