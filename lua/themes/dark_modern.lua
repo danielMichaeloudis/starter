@@ -83,6 +83,25 @@ M.polish_hl = {
     ["@keyword"] = {
       fg = M.base_30.nord_blue,
     },
+    ["@function"] = {
+      fg = M.base_30.yellow,
+    },
+    ["@function.method"] = {
+      fg = M.base_30.yellow,
+    },
+    ["@constant.macro"] = {
+      fg = M.base_30.blue,
+    },
+    ["@string"] = {
+      fg = M.base_30.orange,
+    },
+    -- Rust
+    ["@lsp.type.const.rust"] = {
+      fg = M.base_30.blue,
+    },
+    ["@lsp.type.static.rust"] = {
+      fg = M.base_30.blue,
+    },
   },
   syntax = {
     Comment = {
@@ -93,6 +112,22 @@ M.polish_hl = {
     },
     Keyword = {
       fg = M.base_30.nord_blue,
+    },
+    Function = {
+      fg = M.base_30.yellow,
+    },
+    String = {
+      fg = M.base_30.orange,
+    },
+    Macro = {
+      fg = M.base_30.blue,
+    },
+    Type = {
+      fg = M.base_30.teal,
+    },
+    -- Rust
+    rustSigil = {
+      fg = M.base_30.white,
     },
   },
 }
