@@ -72,12 +72,19 @@ return {
     "HiPhish/rainbow-delimiters.nvim",
     event = "BufReadPost",
     config = function()
-      local highlight = {
-        "#ff0000",
-        "#00ff00",
+      require("rainbow-delimiters.setup").setup {
+        strategy = {
+          [""] = "rainbow-delimiters.strategy.global",
+        },
+        query = {
+          [""] = "rainbow-delimiters",
+        },
+        highlight = {
+          "RainbowDelimiterYellow",
+          "RainbowDelimiterViolet",
+          "RainbowDelimiterBlue",
+        },
       }
-      vim.g.rainbow_delimiters = { highlight = highlight }
-      require("rainbow-delimiters.setup").setup()
     end,
   },
 }
