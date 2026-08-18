@@ -165,6 +165,12 @@ M.polish_hl = {
     Boolean = {
       fg = M.base_30.blue,
     },
+    Statement = {
+      fg = M.base_30.blue,
+    },
+    Define = {
+      fg = M.base_30.teal,
+    },
     -- Rust
     rustSigil = {
       fg = M.base_30.white,
@@ -177,6 +183,10 @@ M.polish_hl = {
     },
     rustAttributeParenthesizedParens = {
       fg = M.base_16.base06,
+    },
+    -- Python
+    pythonConstant = {
+      fg = M.base_30.blue,
     },
   },
 }
