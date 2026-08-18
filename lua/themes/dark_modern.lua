@@ -52,7 +52,7 @@ M.base_30 = { -- Main UI colours
   vibrant_green = "#B5CEA8",
 
   blue = "#569CD6",
-  nord_blue = "#0078D4",
+  nord_blue = "#4FC1FF",
 
   yellow = "#DCDCAA",
   sun = "#D7BA7D",
@@ -78,10 +78,10 @@ M.polish_hl = {
       fg = M.base_30.green,
     },
     ["@module"] = {
-      fg = M.base_30.nord_blue,
+      fg = M.base_30.teal,
     },
     ["@keyword"] = {
-      fg = M.base_30.nord_blue,
+      fg = M.base_30.blue,
     },
     ["@function"] = {
       fg = M.base_30.yellow,
@@ -92,15 +92,39 @@ M.polish_hl = {
     ["@constant.macro"] = {
       fg = M.base_30.blue,
     },
+    ["@constant"] = {
+      fg = M.base_30.blue,
+    },
     ["@string"] = {
       fg = M.base_30.orange,
     },
+    ["@property"] = {
+      fg = M.base_30.cyan,
+    },
+    ["@variable"] = {
+      fg = M.base_30.cyan,
+    },
+    ["@variable.parameter"] = {
+      fg = M.base_30.cyan,
+    },
+    ["@variable.member"] = {
+      fg = M.base_30.cyan,
+    },
     -- Rust
     ["@lsp.type.const.rust"] = {
-      fg = M.base_30.blue,
+      fg = M.base_30.nord_blue,
     },
     ["@lsp.type.static.rust"] = {
+      fg = M.base_30.nord_blue,
+    },
+    ["@lsp.type.typeAlias.rust"] = {
+      fg = M.base_30.teal,
+    },
+    ["@lsp.type.selfTypeKeyword.rust"] = {
       fg = M.base_30.blue,
+    },
+    ["@lsp.type.enumMember.rust"] = {
+      fg = M.base_30.nord_blue,
     },
   },
   syntax = {
@@ -108,10 +132,10 @@ M.polish_hl = {
       fg = M.base_30.green, --as
     },
     Import = {
-      fg = M.base_30.nord_blue,
+      fg = M.base_30.blue,
     },
     Keyword = {
-      fg = M.base_30.nord_blue,
+      fg = M.base_30.blue,
     },
     Function = {
       fg = M.base_30.yellow,
@@ -125,9 +149,34 @@ M.polish_hl = {
     Type = {
       fg = M.base_30.teal,
     },
+    Number = {
+      fg = M.base_30.vibrant_green,
+    },
+    StorageClass = {
+      fg = M.base_30.blue,
+    },
+    Delimiter = {
+      fg = M.base_16.base06,
+    },
+    Character = {
+      fg = M.base_30.vibrant_green,
+    },
+    DiagnosticUnnecessary = {},
+    Boolean = {
+      fg = M.base_30.blue,
+    },
     -- Rust
     rustSigil = {
       fg = M.base_30.white,
+    },
+    rustEscape = {
+      fg = M.base_30.sun,
+    },
+    rustSelf = {
+      fg = M.base_30.blue,
+    },
+    rustAttributeParenthesizedParens = {
+      fg = M.base_16.base06,
     },
   },
 }

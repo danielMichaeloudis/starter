@@ -26,7 +26,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     opts = function()
-      local M = require("nvchad.configs.cmp")
+      local M = require "nvchad.configs.cmp"
       M.completion.completeopt = "menu,menuone,noselect"
       M.mapping["<CR>"] = cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Insert,
@@ -67,5 +67,17 @@ return {
     keys = {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    event = "BufReadPost",
+    config = function()
+      local highlight = {
+        "#ff0000",
+        "#00ff00",
+      }
+      vim.g.rainbow_delimiters = { highlight = highlight }
+      require("rainbow-delimiters.setup").setup()
+    end,
   },
 }
