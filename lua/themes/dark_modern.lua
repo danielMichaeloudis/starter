@@ -110,6 +110,9 @@ M.polish_hl = {
     ["@variable.member"] = {
       fg = M.base_30.cyan,
     },
+    ["@number"] = {
+      fg = M.base_30.vibrant_green,
+    },
     -- Rust
     ["@lsp.type.const.rust"] = {
       fg = M.base_30.nord_blue,
@@ -187,6 +190,16 @@ M.polish_hl = {
     -- Python
     pythonConstant = {
       fg = M.base_30.blue,
+    },
+    pythonOperator = {
+      fg = M.base_30.blue,
+    },
+    pythonBoolean = {
+      fg = M.base_30.blue,
+    },
+    -- Json
+    jsonKeyword = {
+      fg = M.base_30.teal,
     },
   },
 }
