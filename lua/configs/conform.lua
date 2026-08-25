@@ -6,6 +6,8 @@ local options = {
     python = { "ruff_format" },
     rust = { "rustfmt" },
     json = { "pretttier" },
+    json5 = { "pretttier" },
+    js = { "prettier" },
   },
 
   format_on_save = {

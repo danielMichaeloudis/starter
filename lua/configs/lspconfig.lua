@@ -3,9 +3,9 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "nvchad.configs.lspconfig"
 
-lspconfig.servers = { "html", "cssls", "ts_ls", "pyright", "ruff" }
+lspconfig.servers = { "html", "cssls", "ts_ls", "pyright", "ruff", "vtsls" }
 
-local servers = { "ruff", "ty" }
+local servers = { "ruff", "ty", "vtsls" }
 
 vim.lsp.config("ruff", {
 

@@ -132,7 +132,7 @@ M.polish_hl = {
   },
   syntax = {
     Comment = {
-      fg = M.base_30.green, --as
+      fg = M.base_30.green,
     },
     Import = {
       fg = M.base_30.blue,
